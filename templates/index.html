@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Wedding Site</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    </head>
+    <body>
+        <nav>
+            <span id="nav-links">
+                <a href="/event-details">Event Details</a> // 
+                <a href="/gallery">Gallery</a> // 
+                <a href="/travel-and-stay">Travel & Stay</a>
+            </span>
+            <a id="initials" href="/">C&E</a>
+            <a id="rsvp-button" href="/rsvp">RSVP</a>
+        </nav>
+        <main>
+            <div id="content">            
+                <div>We're getting married!</div>
+                <h1 id="names">Caitlyn & Eric</h1>
+                <div>{{ delta.days }} days to the event</div>
+                <div>September 16th, 2024 // Breckenridge // Colorado<div>
+            </div>
+        </main>
+    </body>
+</html>

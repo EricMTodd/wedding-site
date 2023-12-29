@@ -1,0 +1,12 @@
+
+
+#names {
+    font-family: serif;
+}
+
+#content {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
