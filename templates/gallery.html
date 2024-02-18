@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Wedding Site</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/gallery.css') }}">
     </head>
     <body>
         <nav>
@@ -17,7 +18,11 @@
         </nav>
         <main>
             <h1>Gallery</h1>
-            <div id="gallery"></div>
+            <div id="gallery">
+                {% for image_file in image_files %}
+                    <img src="{{ url_for('static', filename='images/gallery/' + image_file) }}" alt="Image">
+                {% endfor %}
+            </div>
         </main>
         <script src="../static/js/gallery.js">
 

@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from datetime import date
+import os
 
 app = Flask(__name__)
 
@@ -16,7 +17,9 @@ def event_details():
 
 @app.route('/gallery')
 def gallery():
-	return render_template('gallery.html')
+	image_folder = os.path.join(app.static_folder, 'images', 'gallery')
+	image_files = [f for f in os.listdir(image_folder) if os.path.isfile(os.path.join(image_folder,f))]
+	return render_template('gallery.html', image_files=image_files)
 
 @app.route('/rsvp')
 def rsvp():
