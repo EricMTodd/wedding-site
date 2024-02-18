@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
 	today = date.today()
-	event = date(2024, 9, 16)
+	event = date(2024, 9, 14)
 	delta = event - today
 	return render_template('index.html', delta=delta)
 
