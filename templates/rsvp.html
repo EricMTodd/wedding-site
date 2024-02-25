@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Wedding Site</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/rsvp.css') }}">
     </head>
     <body>
         <nav>
@@ -17,6 +18,13 @@
         </nav>
         <main>
             <h1>RSVP</h1>
+            <form method="post" action="/rsvp">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="plus_ones">Number of Plus Ones:</label>
+                <input type="number" id="plus_ones" name="plus_ones" min="0">
+                <button type="submit">Submit RSVP</button>
+            </form>            
         </main>
     </body>
 </html>
