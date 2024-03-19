@@ -51,3 +51,6 @@ def rsvp_list():
 @app.route('/travel-and-stay')
 def travel_and_stay():
 	return render_template('travel-and-stay.html')
+
+if __name__== '__main__':
+      app.run(debug=True, port=8080)
