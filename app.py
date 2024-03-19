@@ -46,7 +46,7 @@ def rsvp():
 def rsvp_list():
     rsvps = RSVP.query.all()
     total_guests = sum(rsvp.plus_ones + 1 for rsvp in rsvps)  # Counting each RSVP plus one
-    return render_template('rsvp_list.html', rsvps=rsvps, total_guests=total_guests)
+    return render_template('rsvp-list.html', rsvps=rsvps, total_guests=total_guests)
 
 @app.route('/travel-and-stay')
 def travel_and_stay():
