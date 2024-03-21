@@ -7,12 +7,17 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
     </head>
     <body>
+        <span id="nav-links" class="closed">
+            <a href="/event-details">Event Details</a> // 
+            <a href="/gallery">Gallery</a> // 
+            <a href="/travel-and-stay">Travel & Stay</a>
+        </span>
         <nav>
-            <span id="nav-links">
-                <a href="/event-details">Event Details</a> // 
-                <a href="/gallery">Gallery</a> // 
-                <a href="/travel-and-stay">Travel & Stay</a>
-            </span>
+            <div class="hamburger-menu" onclick="toggleNavLinks()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
             <a id="initials" href="/">C&E</a>
             <a id="rsvp-button" href="/rsvp">RSVP</a>
         </nav>
@@ -24,5 +29,12 @@
                 <div>September 14th, 2024 // Breckenridge, Colorado<div>
             </div>
         </main>
+
+        <script>
+            const toggleNavLinks = () => {
+                let navLinks = document.querySelector('#nav-links');
+                navLinks.classList.toggle('opened');
+            }
+        </script>
     </body>
 </html>

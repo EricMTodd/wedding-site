@@ -1,22 +1,55 @@
-main {
-    background-image: url("../images/gallery/Caitlyn\ +\ Eric-100.jpg");
-    background-position: top center;
-    background-size: cover; 
+/* Desktop styles */
+@media (orientation: landscape) {
+    main {
+        background-image: url("../images/gallery/Caitlyn\ +\ Eric-100.jpg");
+        background-position: top center;
+        background-size: cover; 
+    }
+    
+    #names {
+        font-family: serif;
+    }
+    
+    #content {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        height: 200px;
+        width: 700px;
+        margin-top: 25px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
 }
 
-#names {
-    font-family: serif;
-}
-
-#content {
-    padding-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    height: 200px;
-    width: 700px;
-    margin-top: 25px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+/* Mobile styles */
+@media (orientation: portrait) {
+    main {
+        background-image: url("../images/gallery/Caitlyn\ +\ Eric-100.jpg");
+        background-position: top center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+    }
+    
+    #names {
+        font-family: serif;
+    }
+    
+    #content {
+        font-size: 2em;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: rgba(255, 255, 255, 0.8);
+        height: 18%;
+        width: 90%;
+        margin-top: 125px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
 }

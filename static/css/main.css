@@ -1,71 +1,190 @@
-body {
-    margin: 0;
-    width: 100%;
-    font-family: sans-serif;
+/* Desktop styles */
+@media (orientation: landscape) {
+    body {
+        margin: 0;
+        width: 100%;
+        font-family: sans-serif;
+    }
+    
+    nav {
+        height: 48px;
+        background-color: white;
+        color: black;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        border-bottom: 2px solid black;
+    }
+    
+    main {
+        background-color: linen;
+        overflow-y: auto;
+        height: calc(100vh - 50px);
+        display: flex;
+        justify-content: center;
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+        transition: 0.2s;
+    }
+    
+    a:hover {
+        transition: 0.2s;
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    }
+    
+    a:active {
+        color: goldenrod;
+        transition: 0s;
+    }
+    
+    #rsvp-button {
+        background: none;
+        border-radius: 0;
+        border: solid 2px black;
+        margin: 0;
+        padding: 5px 5px 5px 5px;
+        font-weight: bold;
+        transition: 0.2s;
+        position: absolute;
+        right: 15px;
+    }
+    
+    #rsvp-button:hover {
+        background: black;
+        color: white;
+        transition: 0.2s;
+        box-shadow: 0px 0px 5px slategray;
+    }
+    
+    #nav-links {
+        position: absolute;
+        left: 15px;
+    }
+    
+    #initials {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        font-family: serif;
+        font-size: 1.5em;
+    }
+
+    .hamburger-menu {
+        display: none;
+        cursor: pointer;
+    }
 }
 
-nav {
-    height: 48px;
-    background-color: white;
-    color: black;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    border-bottom: 2px solid black;
-}
+/* Mobile styles */
+@media (orientation: portrait) {
+    body {
+        margin: 0;
+        width: 100%;
+        font-family: sans-serif;
+    }
 
-main {
-    background-color: linen;
-    overflow-y: auto;
-    height: calc(100vh - 50px);
-    display: flex;
-    justify-content: center;
-}
+    main {
+        background-color: linen;
+        height: calc(100vh - 100px);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
 
-a {
-    text-decoration: none;
-    color: black;
-    transition: 0.2s;
-}
+    a {
+        text-decoration: none;
+        color: black;
+        transition: 0.2s;
+    }
+    
+    a:hover {
+        transition: 0.2s;
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    }
+    
+    a:active {
+        color: goldenrod;
+        transition: 0s;
+    }
 
-a:hover {
-    transition: 0.2s;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
-}
+    nav {
+        position: absolute;
+        display: flex;
+        height: 98px;
+        align-items: center;
+        background-color: white;
+        z-index: 99;
+        width: 100%;
+        z-index: 2;
+    }
 
-a:active {
-    color: goldenrod;
-    transition: 0s;
-}
+    .hamburger-menu {
+        width: 100px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
-#rsvp-button {
-    background: none;
-    border-radius: 0;
-    border: solid 2px black;
-    margin: 0;
-    padding: 5px 5px 5px 5px;
-    font-weight: bold;
-    transition: 0.2s;
-    position: absolute;
-    right: 15px;
-}
+    .bar {
+        width: 75px;
+        height: 10px;
+        background-color: black;
+        margin: 7px 0;
+        border-radius: 30px;
+    }
 
-#rsvp-button:hover {
-    background: black;
-    color: white;
-    transition: 0.2s;
-    box-shadow: 0px 0px 5px slategray;
-}
+    #nav-links {
+        height: 98px;
+        background-color: white;
+        border-bottom: 2px solid black;
+        width: 100%;
+        position: absolute;
+        font-size: 3em;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: 1;
+        transition: top 0.3s ease;
+    }
 
-#nav-links {
-    position: absolute;
-    left: 15px;
-}
+    #rsvp-button {
+        background: none;
+        border-radius: 0;
+        border: solid 5px black;
+        margin: 0;
+        padding: 5px 5px 5px 5px;
+        font-weight: bold;
+        transition: 0.2s;
+        position: absolute;
+        right: 20px;
+        font-size: 3em;
+    }
+    
+    #rsvp-button:hover {
+        background: black;
+        color: white;
+        transition: 0.2s;
+        box-shadow: 0px 0px 5px slategray;
+    }   
 
-#initials {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    font-family: serif;
-    font-size: 1.5em;
+    #initials {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        font-family: serif;
+        font-size: 4em;
+    }
+
+    .closed {
+        top: 0;
+    }
+
+    .opened {
+        top: 100px;
+    }
 }

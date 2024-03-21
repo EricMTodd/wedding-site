@@ -1,13 +1,21 @@
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+/* Desktop styles */
+@media (orientation: landscape) {
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    table {
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        padding: 50px;
+    }
 }
 
-table {
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    padding: 50px;
+/* Mobile styles */
+@media (orientation: portrait) {
+    
 }
