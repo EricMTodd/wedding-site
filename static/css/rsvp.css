@@ -23,5 +23,52 @@
 
 /* Mobile styles */
 @media (orientation: portrait) {
+    main {
+        font-size: 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
     
+    form {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        padding: 50px;
+        width: 80%;
+        height: 500px;
+        justify-content: space-evenly
+    }
+    
+    input {
+        margin-bottom: 15px;
+        height: 50px;
+        font-size: 1.7em;
+        border: 2px solid black;
+        margin-top: 2px;
+    }
+    
+    button {
+        height: 100px;
+        font-size: 1.5em;
+        width: 60%;
+        margin: 0 auto;
+        border-radius: 30px;
+        border: 2px solid black;
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none; /* Remove default appearance */
+        margin: 0; /* Remove default margin */
+        display: none;
+    }
+
+    input[type=number] {
+        /* Prevent spinner buttons from showing up */
+        -moz-appearance: textfield; /* Firefox */
+    }
 }
