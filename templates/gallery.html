@@ -22,7 +22,7 @@
             <a id="rsvp-button" href="/rsvp">RSVP</a>
         </nav>
         <main>
-            <h1>Gallery</h1>
+            <!-- <h1>Gallery</h1> -->
             <div id="gallery">
                 {% for image_file in image_files %}
                     <img src="{{ url_for('static', filename='images/gallery/' + image_file) }}" alt="Image">
