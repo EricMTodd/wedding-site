@@ -60,7 +60,8 @@
         height: 500px;
     }
 
-    main:first-child {
+    main > :first-child {
         margin-top: calc(48px + 15px);
+        
     }
 }
