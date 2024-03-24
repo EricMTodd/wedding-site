@@ -39,7 +39,6 @@
         margin: 0px 15px 10px 15px;
         border-radius: 25px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-
     }
 
     #gallery {
@@ -47,6 +46,6 @@
     }
 
     #gallery img:first-child {
-        margin-top: 15px;
+        margin-top: calc(48px + 15px);
     }
 }
