@@ -45,4 +45,8 @@
     main > div > h3, main > div > h2 {
         text-align: center;
     }
+
+    main:first-child {
+        margin-top: calc(48px + 15px);
+    }
 }
